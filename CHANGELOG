@@ -1,16 +1,30 @@
-# CHANGELOG
+# Changelog
 
-## [4.6.6](https://github.com/wibus-wee/kami/compare/d91230b1d42660ff084410f00f5c7bf517e3ef82...v4.6.6) (2024-07-07)
+All notable changes to this project will be documented in this file.
 
+## v5.0.0
+
+> Release Date: 2026-04-13
+
+### Features
+
+- **i18n**: Add multi-language support with next-intl, including Chinese, English, and Japanese translations
+- **api-client**: Support api-client v3 with breaking changes in comment threading, owner endpoints, and model types
+- **backend**: Be compatible with the latest backend, including note music support and updated data structures
 
 ### Bug Fixes
 
-* follow the upstream backend data structure ([c7b003e](https://github.com/wibus-wee/kami/commit/c7b003e285ef347b0a7bbd1eee1ffce13d05fb70))
-* import an non-existed music hook ([758f80b](https://github.com/wibus-wee/kami/commit/758f80be7776c9e2de0af9de8715c8cf807b38d4))
-* **timeline:** update 'important' property from 'note.hasImportant' to 'note.bookmark' ([414336a](https://github.com/wibus-wee/kami/commit/414336a960de2a065851b0363ee690a16512fbb3))
-* update to be compatible with the latest backend ([aa13189](https://github.com/wibus-wee/kami/commit/aa13189d005a29233b5c3cc09af0633e5582964c))
-* use ack read to increase read counts ([d91230b](https://github.com/wibus-wee/kami/commit/d91230b1d42660ff084410f00f5c7bf517e3ef82))
-* xlog summary cannot display ([ed808a6](https://github.com/wibus-wee/kami/commit/ed808a6c98fe4dd973d616baa90866d07642181a))
+- **comment**: Fix thread display keys and depth-based indent
+- **markdown/ui**: Restore footnote LinkCard rendering and stabilize note/timeline layouts
 
+### Chores
 
+- Migrate to Better Auth & upgrade toolchain (ESLint 9 flat config, React, TypeScript updates)
+- Update demo URL
+- Update documentation link
+- Update various dev dependencies: `@types/randomcolor`, `@types/react-color`, `@types/remove-markdown`, `@trivago/prettier-plugin-sort-imports`, `js-yaml`, `@types/js-cookie`, `zx`
+- Disable deploy CI
 
+## Warning
+
+- You should upgrade mx-server to 11.x
